@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome to Your Receipt Tracker</h1>
+        </header>
+
+        <main>
+            <section>
+                <h2>Your Receipts</h2>
+                <!-- Display a list of the user's receipts here -->
+                <!-- Example: -->
+                <ul>
+                    {% for receipt in receipts %}
+                        <li>{{ receipt.store_name }} - {{ receipt.date_of_purchase }} - ${{ receipt.total_amount }}</li>
+                    {% endfor %}
+                </ul>
+            </section>
+
+            <section>
+                <h2>Actions</h2>
+                <p>Explore and manage your receipts with our easy-to-use interface.</p>
+                <a href="{% url 'receipt_list' %}">View All Receipts</a>
+                <a href="{% url 'receipt_new' %}">Add New Receipt</a>
+            </section>
+        </main>
+ 
+    </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Receipt List</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Receipt List</h1>
+        </header>
+
+        <main>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Store Name</th>
+                        <th>Date of Purchase</th>
+                        <th>Total Amount</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for receipt in receipts %}
+                        <tr>
+                            <td>{{ receipt.store_name }}</td>
+                            <td>{{ receipt.date_of_purchase }}</td>
+                            <td>${{ receipt.total_amount }}</td>
+                            <td>
+                                <a href="{% url 'receipt_detail' pk=receipt.pk %}">View</a>
+                                <a href="{% url 'receipt_edit' pk=receipt.pk %}">Edit</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+            <a href="{% url 'receipt_new' %}">Add a new receipt</a>
+        </main>
+    </div>
+</body>
+</html>

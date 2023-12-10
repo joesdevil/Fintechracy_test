@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% if form.instance.pk %}Edit Receipt{% else %}New Receipt{% endif %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>{% if form.instance.pk %}Edit Receipt{% else %}New Receipt{% endif %}</h1>
+        </header>
+
+        <main>
+            <form method="post" action="{% if form.instance.pk %}{% url 'receipt_edit' pk=form.instance.pk %}{% else %}{% url 'receipt_new' %}{% endif %}">
+                {% csrf_token %}
+
+                <div class="form-group">
+                    <label for="id_store_name">Store Name</label>
+                    {{ form.store_name }}
+                </div>
+
+                <div class="form-group">
+                    <label for="id_date_of_purchase">Date of Purchase</label>
+                    {{ form.date_of_purchase }}
+                </div>
+
+                <div class="form-group">
+                    <label for="id_item_list">Item List</label>
+                    {{ form.item_list }}
+                </div>
+
+                <div class="form-group">
+                    <label for="id_total_amount">Total Amount</label>
+                    {{ form.total_amount }}
+                </div>
+
+                <button type="submit">{% if form.instance.pk %}Save changes{% else %}Submit receipt{% endif %}</button>
+            </form>
+
+            <a href="{% url 'receipt_list' %}">Back to list</a>
+        </main>
+    </div>
+</body>
+</html>
