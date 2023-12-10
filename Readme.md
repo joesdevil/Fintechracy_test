@@ -55,3 +55,4 @@ This is a simple Django application that allows users to manually enter and trac
 ## Video
 
 [![Alt text](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=rsWBVTU0sPc)
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=rsWBVTU0sPc" frameborder="0" allowfullscreen></iframe>
