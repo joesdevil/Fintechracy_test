@@ -51,4 +51,7 @@ This is a simple Django application that allows users to manually enter and trac
 - Visit the admin site [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/) to add/edit users and receipts.
 - Use the application at [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
 
- 
+
+## Video
+
+[![Alt text](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=rsWBVTU0sPc)

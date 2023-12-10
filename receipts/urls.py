@@ -10,7 +10,7 @@ urlpatterns = [
     path('receipt/<int:pk>/edit/', receipt_edit, name='receipt_edit'),
     path('login/', login_view, name='login'),
     path('logout/', CustomLogoutView.as_view(), name='logout'),
-    path('register/', RegistrationView.as_view(), name='register'),
+    path('register/', register, name='register'),
     path('home/', home, name='home'),
 
 ]
