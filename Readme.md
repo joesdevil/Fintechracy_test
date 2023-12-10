@@ -7,11 +7,11 @@ This is a simple Django application that allows users to manually enter and trac
 1. Clone the repository:
 
     ```bash
-    git clone <repository-url>
-    cd receipt_tracker
+    git clone https://github.com/joesdevil/Fintechracy_test
+    cd Fintechracy_test
     ```
 
-2. Create and activate a virtual environment:
+2. Create and activate a virtual environment :
 
     ```bash
     python -m venv venv
@@ -19,9 +19,10 @@ This is a simple Django application that allows users to manually enter and trac
     ```
 
 3. Install dependencies:
+    this app depend only on django so there is no requirements.txt file
 
     ```bash
-    pip install -r requirements.txt
+    pip install django
     ```
 
 4. Apply migrations:
@@ -31,6 +32,7 @@ This is a simple Django application that allows users to manually enter and trac
     ```
 
 5. Create a superuser:
+    this user you can make access with it 
 
     ```bash
     python manage.py createsuperuser
@@ -49,9 +51,4 @@ This is a simple Django application that allows users to manually enter and trac
 - Visit the admin site [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/) to add/edit users and receipts.
 - Use the application at [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
 
-## Tests
-
-To run tests, use the following command:
-
-```bash
-python manage.py test
+ 
